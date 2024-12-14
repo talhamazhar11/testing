@@ -19,8 +19,6 @@
             color: #fff;
             padding: 100px 20px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
 
         header img {
@@ -30,53 +28,17 @@
             object-fit: cover;
             border: 5px solid #f1c40f;
             margin-bottom: 20px;
-            animation: fadeIn 1s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
         }
 
         header h1 {
             font-size: 3rem;
             margin: 0;
-            font-weight: 700;
-            letter-spacing: 1px;
-            animation: slideInDown 1.5s ease-out;
         }
 
         header p {
             font-size: 1.2rem;
             margin-top: 10px;
             color: #ecf0f1;
-            animation: slideInUp 1.5s ease-out;
-        }
-
-        @keyframes slideInDown {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideInUp {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
         }
 
         nav {
@@ -94,6 +56,7 @@
             justify-content: center;
             margin: 0;
             padding: 0;
+            flex-wrap: wrap;
         }
 
         nav ul li {
@@ -120,7 +83,6 @@
             padding: 50px 20px;
             max-width: 1200px;
             margin: auto;
-            animation: fadeIn 2s ease-out;
         }
 
         section {
@@ -177,24 +139,30 @@
             gap: 30px;
         }
 
-        .resume {
-            text-align: center;
-            margin-top: 40px;
+        form {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        .resume a {
-            display: inline-block;
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
             background: #16a085;
             color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 30px;
-            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
-        .resume a:hover {
+        form button:hover {
             background: #1abc9c;
         }
 
@@ -203,7 +171,6 @@
             background: #2c3e50;
             color: white;
             padding: 20px 0;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
         }
 
         footer p {
@@ -219,11 +186,53 @@
         footer p a:hover {
             text-decoration: underline;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 50px 20px;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card img {
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            form input, form textarea, form button {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="profile_pic.jpg" alt="Talha Bin Mazhar">
+        <img src="/mnt/data/WhatsApp%20Image%202024-08-21%20at%204.20.22%20PM.jpeg" alt="Talha Bin Mazhar">
         <h1>Talha Bin Mazhar</h1>
         <p>Designing Sustainable Infrastructure with Passion</p>
     </header>
@@ -266,39 +275,29 @@
                 </div>
             </div>
         </section>
-section id="certifications">
+
+        <section id="certifications">
             <h2>Certifications</h2>
-            <div class="grid">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" alt="Certification 1">
-                    <h3>LEED Green Associate</h3>
-                    <p>Demonstrated knowledge in sustainable building principles.</p>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" alt="Certification 2">
-                    <h3>AutoCAD Civil 3D Certified Professional</h3>
-                    <p>Expertise in using Civil 3D for engineering design and drafting.</p>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" alt="Certification 3">
-                    <h3>Project Management Professional (PMP)</h3>
-                    <p>Proven skills in project management and leadership.</p>
-                </div>
-            </div>
+           
+            <ul>
+                <li>Professional Engineer (PE) Certification</li>
+                <li>LEED Green Associate</li>
+                <li>AutoCAD Civil 3D Certified Professional</li>
+            </ul>
         </section>
 
         <section id="experience">
             <h2>Experience</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Structural Engineer</h3>
-                    <p>XYZ Construction, 2018 - Present</p>
-                    <p>Lead designer for various residential and commercial projects, focusing on sustainability.</p>
+                    <h3>Senior Civil Engineer</h3>
+                    <p>XYZ Infrastructure, 2018 - Present</p>
+                    <p>Leading a team in designing sustainable urban projects and ensuring compliance with environmental standards.</p>
                 </div>
                 <div class="card">
-                    <h3>Civil Engineering Intern</h3>
-                    <p>ABC Infrastructure, 2017 - 2018</p>
-                    <p>Assisted in site analysis and feasibility studies for urban projects.</p>
+                    <h3>Project Engineer</h3>
+                    <p>ABC Constructions, 2015 - 2018</p>
+                    <p>Executed large-scale construction projects with an emphasis on structural integrity and efficiency.</p>
                 </div>
             </div>
         </section>
@@ -306,43 +305,34 @@ section id="certifications">
         <section id="skills">
             <h2>Skill Set</h2>
             <ul>
-                <li>Structural Analysis & Design</li>
+                <li>Structural Analysis and Design</li>
                 <li>AutoCAD Civil 3D</li>
-                <li>Sustainability Practices</li>
+                <li>PTV Vissim for Traffic Simulation</li>
+                <li>Sustainability and Green Infrastructure</li>
                 <li>Project Management</li>
-                <li>Construction Technology Integration</li>
             </ul>
         </section>
 
         <section id="resume">
+            <h2>Resume</h2>
             <div class="resume">
-                <h2>Resume</h2>
-                <a href="https://example.com/resume.pdf" target="_blank">Download My Resume</a>
+                <a href="#">Download My Resume</a>
             </div>
         </section>
 
         <section id="contact">
             <h2>Contact Me</h2>
-            <p>If you’d like to collaborate on a project or just say hi, feel free to reach out!</p>
             <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </section>
-
     </div>
 
     <footer>
-        <p>&copy; 2024 Talha Bin Mazhar. All Rights Reserved. Built with passion.</p>
+        <p>&copy; 2024 Talha Bin Mazhar. Built with passion. Connect on <a href="#">LinkedIn</a>.</p>
     </footer>
-
 </body>
 </html>
