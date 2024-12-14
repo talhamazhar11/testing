@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Talha Bin Mazhar</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #2c3e50;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #f1c40f;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: 1px;
+            animation: slideInDown 1.5s ease-out;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #ecf0f1;
+            animation: slideInUp 1.5s ease-out;
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: capitalize;
+            padding: 8px 12px;
+            border-radius: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #f1c40f;
+            color: #fff;
+        }
+
+        .container {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+            animation: fadeIn 2s ease-out;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: #f1c40f;
+            margin-top: 10px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin: 15px;
+        }
+
+        .card p {
+            margin: 0 15px 15px;
+            color: #7f8c8d;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .resume {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .resume a {
+            display: inline-block;
+            background: #16a085;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: background 0.3s;
+        }
+
+        .resume a:hover {
+            background: #1abc9c;
+        }
+
+        footer {
+            text-align: center;
+            background: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer p a {
+            color: #f1c40f;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/mnt/data/WhatsApp%20Image%202024-08-21%20at%204.20.22%20PM.jpeg" alt="Talha Bin Mazhar">
+        <h1>Talha Bin Mazhar</h1>
+        <p>Designing Sustainable Infrastructure with Passion</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a civil engineer dedicated to creating sustainable and technologically advanced infrastructure solutions. My passion lies in merging traditional engineering with cutting-edge technology to tackle today’s challenges effectively.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" alt="Project 1">
+                    <h3>Smart City Traffic Analysis</h3>
+                    <p>Enhanced traffic flow with data-driven solutions using PTV Vissim.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" alt="Project 2">
+                    <h3>Eco-Friendly Drainage System</h3>
+                    <p>Designed green urban drainage systems integrating sustainability.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" alt="Project 3">
+                    <h3>Earthquake-Resistant Structures</h3>
+                    <p>Developed seismic-safe designs meeting global standards.</p>
+                </div>
+            </div>
+        </section>
+
+       
