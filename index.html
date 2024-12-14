@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Talha Bin Mazhar</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
@@ -16,12 +15,11 @@
         }
 
         header {
-            background: linear-gradient(to right, #000, #333);
-            color: white;
+            background: linear-gradient(to right, #000, #555);
+            color: #fff;
             padding: 50px 20px;
             text-align: center;
             position: relative;
-            overflow: hidden;
         }
 
         header img {
@@ -30,19 +28,18 @@
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid #f39c12;
-            animation: float 3s ease-in-out infinite;
+            margin-bottom: 20px;
         }
 
         header h1 {
             font-size: 3rem;
-            margin: 20px 0 10px;
+            margin: 0;
             letter-spacing: 2px;
-            animation: fadeIn 2s;
         }
 
         header p {
             font-size: 1.5rem;
-            animation: fadeIn 3s;
+            margin-top: 10px;
         }
 
         nav {
@@ -50,9 +47,6 @@
             justify-content: center;
             background: #000;
             padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
         nav a {
@@ -100,7 +94,6 @@
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
-            position: relative;
         }
 
         .card:hover {
@@ -123,6 +116,27 @@
             color: #555;
         }
 
+        .like-dislike {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .like-dislike button {
+            background: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .like-dislike button:hover {
+            background: #d35400;
+        }
+
         .resume {
             text-align: center;
             margin: 40px 0;
@@ -142,54 +156,8 @@
             background: #1e8449;
         }
 
-        footer {
+        .feedback {
             text-align: center;
-            background: #000;
-            color: white;
-            padding: 20px 0;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .like-dislike {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-
-        .like-dislike button {
-            background: #f39c12;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .like-dislike button:hover {
-            background: #d35400;
         }
 
         .feedback input {
@@ -213,11 +181,22 @@
         .feedback button:hover {
             background: #2980b9;
         }
+
+        footer {
+            text-align: center;
+            background: #000;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="/mnt/data/WhatsApp Image 2024-08-21 at 4.20.22 PM.jpeg" alt="Talha Bin Mazhar">
+        <img src="/mnt/data/WhatsApp%20Image%202024-08-21%20at%204.20.22%20PM.jpeg" alt="Talha Bin Mazhar">
         <h1>Talha Bin Mazhar</h1>
         <p>Designing the Future of Infrastructure</p>
     </header>
@@ -230,12 +209,13 @@
         <a href="#interests">Interests</a>
         <a href="#feedback">Feedback</a>
         <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>I am a passionate civil engineer from UET Lahore, thriving on integrating technology for sustainable infrastructure solutions.</p>
+            <p>I am a passionate civil engineer who thrives on solving real-world challenges. My work focuses on integrating technology into engineering for sustainable infrastructure development. Let's build a smarter, better world together!</p>
         </section>
 
         <section id="projects">
@@ -244,12 +224,17 @@
                 <div class="card">
                     <img src="https://via.placeholder.com/300" alt="Project 1">
                     <h3>Smart City Traffic Analysis</h3>
-                    <p>Optimized urban traffic patterns using advanced simulation tools.</p>
+                    <p>Optimized urban traffic patterns using PTV Vissim, improving city-wide flow efficiency.</p>
                 </div>
                 <div class="card">
                     <img src="https://via.placeholder.com/300" alt="Project 2">
                     <h3>Eco-Friendly Drainage System</h3>
-                    <p>Developed a sustainable urban drainage system incorporating green solutions.</p>
+                    <p>Designed a sustainable drainage system for urban environments, incorporating green infrastructure.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" alt="Project 3">
+                    <h3>Earthquake-Resistant Structures</h3>
+                    <p>Developed structural designs that meet international seismic safety standards.</p>
                 </div>
             </div>
         </section>
@@ -258,9 +243,56 @@
             <h2>Certifications</h2>
             <div class="certifications">
                 <div class="card">
-                    <img src="https://via.placeholder.com/300" alt="Certification">
-                    <h3>Primavera Planning</h3>
+                    <img src="https://via.placeholder.com/300" alt="Certification 1">
+                    <h3>Autodesk Certified Professional: Revit</h3>
+                    <p>Advanced skills in Revit for Building Information Modeling (BIM).</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" alt="Certification 2">
+                    <h3>ETABS Advanced Structural Design</h3>
+                    <p>Specialized in designing complex structures using ETABS software.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" alt="Certification 3">
+                    <h3>Primavera P6 Professional Project Management</h3>
+                    <p>Expertise in project planning and scheduling using Primavera P6.</p>
                 </div>
             </div>
+        </section>
 
+        <section id="experience">
+            <h2>Experience</h2>
+            <p>Director of Team Planning and HR Management, ICE Society of Civil Engineers - UET Lahore</p>
+        </section>
+
+        <section id="interests">
+            <h2>Interests</h2>
+            <p>I enjoy exploring new advancements in civil engineering, engaging in AI-based structural analysis, and mentoring aspiring engineers.</p>
+        </section>
+
+        <section id="feedback">
+            <h2>Feedback</h2>
+            <div class="feedback">
+                <input type="text" placeholder="Leave your feedback here">
+                <button>Submit</button>
+            </div>
+        </section>
+
+        <section id="resume">
+            <h2>Resume</h2>
+            <div class="resume">
+                <a href="resume_talha_bin_mazhar.pdf" download>Download Resume</a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:talhabinmazhar123@gmail.com">talhabinmazhar123@gmail.com</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Talha Bin Mazhar | All Rights Reserved</p>
+    </footer>
 </body>
+</html>
